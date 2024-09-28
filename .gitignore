@@ -1,0 +1,10 @@
+a.out
+b.out
+conv_parallel
+conv_sequential
+
+par_output.txt
+par_time.txt
+
+seq_output.txt
+seq_time.txt
