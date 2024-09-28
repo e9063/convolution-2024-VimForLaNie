@@ -18,12 +18,9 @@ int main(){
     int *res = calloc((NA + NF - 1),sizeof(int));
     
     for (int i = 0; i < NA; i++) {
-        #pragma omp critical 
-        {
-            #pragma omp parallel for
-            for (int j = 0; j < NF; j++) {
-                res[i + j] += A[i] * F[j];
-            }
+        #pragma omp parallel for
+        for (int j = 0; j < NF; j++) {
+            res[i + j] += A[i] * F[j];
         }
     }
 
