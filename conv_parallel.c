@@ -20,7 +20,7 @@ int main(){
     for (int i = 0; i < NA; i++) {
         #pragma omp critical 
         {
-            #pragma omp parallel for num_threads(4)
+            #pragma omp parallel for
             for (int j = 0; j < NF; j++) {
                 res[i + j] += A[i] * F[j];
             }
