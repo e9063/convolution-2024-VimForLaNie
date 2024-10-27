@@ -20,6 +20,7 @@ int main(){
     for (int i = 0; i < NA; i++) {
         #pragma omp parallel for
         for (int j = 0; j < NF; j++) {
+            #pragma omp atomic
             res[i + j] += A[i] * F[j];
         }
     }

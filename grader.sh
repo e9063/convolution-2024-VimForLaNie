@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Array of input and output file names
-input_files=("input_demo.txt" "input_easy1.txt" "input_easy2.txt" "input_medium1.txt" "input_medium2.txt")
-output_files=("output_demo.txt" "output_easy1.txt" "output_easy2.txt" "output_medium1.txt" "output_medium2.txt")
+input_files=("input_demo.txt" "input_easy1.txt" "input_easy2.txt" "input_medium1.txt" "input_medium2.txt" "input_hard1.txt")
+output_files=("output_demo.txt" "output_easy1.txt" "output_easy2.txt" "output_medium1.txt" "output_medium2.txt" "output_hard1.txt")
 
 # Compile the sequential and parallel programs
 gcc -o conv_sequential conv_sequential.c

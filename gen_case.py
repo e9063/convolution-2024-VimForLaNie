@@ -39,16 +39,15 @@ if len(sys.argv) > 3:
 
 A = np.random.randint(0, 255, NA).astype('i8')
 F = np.random.randint(0, 255, NF).astype('i8')
-print(A)
-print(F)
 B = np.convolve(A, F, mode='valid')
 
 if len(sys.argv) > 1:
+    print("writing input . . .")
     with open(f'input_{name}.txt', 'w') as input_file:
         print(f'{NA} {NF}', file = input_file)
         print(*A, sep='\n', file = input_file)
         print(*F, sep='\n', file = input_file)
-
+    print("writing output . . .")
     with open(f'output_{name}.txt', 'w') as output_file:
         print(*B, sep='\n', file = output_file)
 
